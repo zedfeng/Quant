@@ -6,10 +6,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ts_len = 100
-noise_val = []
+noise = []
 for i in range(ts_len):
-    noise = normalvariate(0, 1)
-    noise_val.append(noise)
-print(np.mean(noise_val))
-plt.plot(noise_val, '-b')
+    noise_val = normalvariate(0, 1)
+    noise.append(noise_val)
+plt.plot(noise, '-b')
 plt.show()
