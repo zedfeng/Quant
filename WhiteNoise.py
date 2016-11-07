@@ -1,21 +1,14 @@
 """
 white noise process
 """
-from random import normalvariate
+# from random import normalvariate
+from numpy.random import randn
 import matplotlib.pyplot as plt
 
-
-def awgn(length, mean, var):
-    data = []
-    for i in range(length):
-        val = normalvariate(mean, var)
-        data.append(val)
-    return data
-
-
 noise_len = 100
-noise_mean = 0
-noise_var = 1
-noise = awgn(noise_len, noise_mean, noise_var)
+# noise_mean = 0
+# noise_var = 1
+# noise = [normalvariate(noise_mean, noise_var) for i in range(noise_len)]
+noise = randn(noise_len)
 plt.plot(noise, '-b')
 plt.show()
